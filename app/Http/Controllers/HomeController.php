@@ -22,7 +22,7 @@ class HomeController extends Controller
     {
         $searchParam = $request->input('search', 'Bang sue');
 
-        $search = $searchParam ? $searchParam : 'Bang sue';
+        $search = $searchParam ? $searchParam.' restaurant' : 'Bang sue restaurant';
 
         // if existing in cache, so using data in cache
         if (Cache::has($search)) {
