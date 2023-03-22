@@ -14,6 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('/get-restaurants', [\App\Http\Controllers\HomeController::class, 'getRestaurants']);
+Route::get('/place-detail/{place_id}', [\App\Http\Controllers\HomeController::class, 'getPlaceDetail']);
